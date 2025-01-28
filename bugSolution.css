@@ -1,0 +1,18 @@
+/* Correct usage of calc() */
+.element {
+  width: calc(100% - 20px);
+  height: calc(50% + 20px);
+  /*Consistent units*/
+  margin: calc(10px + 5%);/*Valid but might produce unexpected result depending on the context*/
+}
+
+/*Inconsistent units*/
+/*.element {
+  width: calc(100% - 10); /* Incorrect: Missing unit */
+  height: calc(50% + 50%); /* Valid but might not be what is intended*/
+}*/
+
+/*Incorrect syntax*/
+/*.element {
+  width: calc(100% - (10px)); /* Incorrect syntax */
+}*/
